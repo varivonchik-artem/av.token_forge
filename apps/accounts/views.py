@@ -10,7 +10,7 @@ from apps.accounts.serializers import UserRegistrationSerializer
 
 
 class UserRegistrationView(APIView):
-    def create(self, request):
+    def post(self, request):
         serializer = UserRegistrationSerializer(data=request.data)
 
         if serializer.is_valid():
